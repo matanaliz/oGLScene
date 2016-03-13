@@ -57,6 +57,16 @@
      </widget>
     </widget>
    </widget>
+   <widget class="GLWidget" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>30</y>
+      <width>541</width>
+      <height>571</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -79,6 +89,13 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>GLWidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="MainWindows.qrc"/>
  </resources>
