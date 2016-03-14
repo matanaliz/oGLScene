@@ -65,6 +65,15 @@
     <ClCompile Include="..\src\UI\GLWidget.cpp">
       <Filter>Source Files\UI</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\UI\ShadersQTextEditCallBack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ShadersQTextEditCallBack.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ShadersQTextEditCallBack.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="MainWindows.qrc">
@@ -78,6 +87,9 @@
     </CustomBuild>
     <CustomBuild Include="..\src\UI\GLWidget.h">
       <Filter>Header Files\UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\UI\ShadersQTextEditCallBack.h">
+      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

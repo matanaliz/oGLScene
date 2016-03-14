@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1464</width>
-    <height>672</height>
+    <width>1083</width>
+    <height>714</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,19 +24,19 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>Tab 1</string>
      </attribute>
-     <widget class="QTextEdit" name="textEdit">
+     <widget class="QTextEdit" name="vertTextEdit">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>471</width>
-        <height>591</height>
+        <x>10</x>
+        <y>10</y>
+        <width>441</width>
+        <height>561</height>
        </rect>
       </property>
      </widget>
@@ -45,13 +45,13 @@
      <attribute name="title">
       <string>Tab 2</string>
      </attribute>
-     <widget class="QTextEdit" name="textEdit_2">
+     <widget class="QTextEdit" name="fragTextEdit">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>471</width>
-        <height>591</height>
+        <x>10</x>
+        <y>20</y>
+        <width>441</width>
+        <height>551</height>
        </rect>
       </property>
      </widget>
@@ -67,13 +67,26 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="TryShader">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>630</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1464</width>
+     <width>1083</width>
      <height>21</height>
     </rect>
    </property>
