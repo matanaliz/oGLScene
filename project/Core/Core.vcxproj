@@ -36,6 +36,7 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="GLEW.props" />
     <Import Project="..\OUTDIR.props" />
+    <Import Project="BOOST.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -82,13 +83,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Core\GL\oGLProgram.cpp" />
-    <ClCompile Include="..\..\src\Core\GL\ShaderProgram.cpp" />
+    <ClCompile Include="..\..\src\Core\Graphics\IndexesVertexBufferObject.cpp" />
+    <ClCompile Include="..\..\src\Core\Graphics\oGLProgram.cpp" />
+    <ClCompile Include="..\..\src\Core\Graphics\Renderer.cpp" />
+    <ClCompile Include="..\..\src\Core\Graphics\ShaderProgram.cpp" />
+    <ClCompile Include="..\..\src\Core\Graphics\VertexArrayObject.cpp" />
+    <ClCompile Include="..\..\src\Core\Graphics\VertexBufferObject.cpp" />
+    <ClCompile Include="..\..\src\Core\Meshes\Mesh.cpp" />
+    <ClCompile Include="..\..\src\Core\Meshes\MeshGenerator.cpp" />
+    <ClCompile Include="..\..\src\Core\Meshes\MeshHelpers\TorusGeneratorHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\Core\GL\oGLProgram.h" />
-    <ClInclude Include="..\..\src\Core\GL\ShaderProgram.h" />
+    <ClInclude Include="..\..\src\Core\Graphics\BufferEnums.h" />
+    <ClInclude Include="..\..\src\Core\Graphics\IndexesVertexBufferObject.h" />
+    <ClInclude Include="..\..\src\Core\Graphics\oGLProgram.h" />
+    <ClInclude Include="..\..\src\Core\Graphics\Renderer.h" />
+    <ClInclude Include="..\..\src\Core\Graphics\ShaderProgram.h" />
+    <ClInclude Include="..\..\src\Core\Graphics\Utils\ErrorChecker.h" />
+    <ClInclude Include="..\..\src\Core\Graphics\VertexArrayObject.h" />
+    <ClInclude Include="..\..\src\Core\Graphics\VertexBufferObject.h" />
+    <ClInclude Include="..\..\src\Core\Meshes\Mesh.h" />
+    <ClInclude Include="..\..\src\Core\Meshes\MeshGenerator.h" />
+    <ClInclude Include="..\..\src\Core\Meshes\MeshHelpers\TorusGeneratorHelper.h" />
     <ClInclude Include="..\..\src\Core\Platform.h" />
+    <ClInclude Include="..\..\src\Core\Utils\Asserts.h" />
+    <ClInclude Include="..\..\src\Core\Utils\Auxilary.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

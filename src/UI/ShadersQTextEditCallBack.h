@@ -10,12 +10,15 @@ class ShadersQTextEditCallBack : public QObject
 
 public:
 	ShadersQTextEditCallBack(QObject *parent);
-	void SetShaderTextEdit(QTextEdit* vertTE, QTextEdit* fragmTE);
+	void setShaderTextEdit(QTextEdit* vertTE, QTextEdit* fragmTE);
 	~ShadersQTextEditCallBack();
 
 public slots:
 	void vertexChanged();	
 	void fragmentChanged();	
+
+	void triangleChanged(bool value);	
+	void torusChanged(bool value);	
 
 private:
 	QTextEdit* vertTE;

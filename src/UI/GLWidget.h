@@ -1,9 +1,10 @@
 #ifndef GLSCENCE_H
 #define GLSCENCE_H
 
-#include <QGLWidget>
+#include <QOpenGLWidget>
+#include <QTimer>
 
-class GLWidget : public QGLWidget
+class GLWidget : public QOpenGLWidget 
 {
 	Q_OBJECT
 
@@ -16,8 +17,11 @@ protected:
 	void paintGL();
 	void resizeGL(int width, int height);
 
+protected slots:
+	void  drawGL();
+
 private:
-	
+	QTimer timer;
 };
 
 #endif // GLSCENCE_H

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1083</width>
-    <height>714</height>
+    <height>723</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,17 +18,17 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>0</y>
+      <y>10</y>
       <width>471</width>
-      <height>611</height>
+      <height>601</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="vertex_tab">
      <attribute name="title">
-      <string>Tab 1</string>
+      <string>Vertex Shader</string>
      </attribute>
      <widget class="QTextEdit" name="vertTextEdit">
       <property name="geometry">
@@ -41,9 +41,9 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="fragment_tab">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>Fragment Shader</string>
      </attribute>
      <widget class="QTextEdit" name="fragTextEdit">
       <property name="geometry">
@@ -55,29 +55,29 @@
        </rect>
       </property>
      </widget>
+     <widget class="QPushButton" name="TryShader">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>520</y>
+        <width>151</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Run Shader</string>
+      </property>
+     </widget>
     </widget>
    </widget>
-   <widget class="GLWidget" name="openGLWidget">
+   <widget class="GLWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>30</y>
-      <width>541</width>
-      <height>571</height>
+      <x>580</x>
+      <y>70</y>
+      <width>411</width>
+      <height>411</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="TryShader">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>630</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
     </property>
    </widget>
   </widget>
@@ -90,6 +90,20 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuMesh">
+    <property name="title">
+     <string>Mesh</string>
+    </property>
+    <addaction name="actionTriangle"/>
+    <addaction name="actionTorus"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuMesh"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -100,13 +114,24 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionTriangle">
+   <property name="text">
+    <string>Triangle</string>
+   </property>
+  </action>
+  <action name="actionTorus">
+   <property name="text">
+    <string>Torus</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
    <class>GLWidget</class>
-   <extends>QOpenGLWidget</extends>
+   <extends>QWidget</extends>
    <header>GLWidget.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

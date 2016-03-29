@@ -1,30 +1,35 @@
 #include "GLWidget.h"
-#include "../Core/GL/oGLProgram.h"
+#include "../Core/Graphics//oGLProgram.h"
 
-static oGLProgram oglProgram;
 
 GLWidget::GLWidget(QWidget *parent)
-	: QGLWidget(parent)
+	: QOpenGLWidget (parent)
 {
+	connect(&timer, SIGNAL(timeout()), this, SLOT(drawGL()));
 }
 
 GLWidget::~GLWidget()
 {
-
 }
 
 void GLWidget::initializeGL()
 {
-	oglProgram.initializeGL();
+	oGLProgram::instance().initializeGL();
+	timer.start();
 }
 
 void GLWidget::paintGL()
 {
-	oglProgram.paintGL();
+	oGLProgram::instance().paintGL();
 }
 
 void GLWidget::resizeGL(int w, int h)
 {
-	oglProgram.resizeGL(w, h);
+	oGLProgram::instance().resizeGL(w, h);
+}
+
+void GLWidget::drawGL()
+{
+	repaint();
 }
 
