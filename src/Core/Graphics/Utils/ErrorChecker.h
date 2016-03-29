@@ -1,8 +1,6 @@
 #ifndef ERROR_CHECKER_H
 #define ERROR_CHECKER_H
 
-#define ALLOW_CHECK_GL 0
-
 #include <GL/glew.h>
 
 //template <typename F, typename ...Args>
