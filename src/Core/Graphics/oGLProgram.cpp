@@ -34,6 +34,7 @@ static GLuint vao = 0;
 
 oGLProgram::oGLProgram()
 {
+	m_meshIndex = -1;
 }
 
 
@@ -41,8 +42,6 @@ oGLProgram::oGLProgram()
 void oGLProgram::initializeGL()
 {
 	glewInit();
-	
-
 
 	shaderProgram.compileShaderFromString(vertex_shader, ShaderProgram::VERTEX);
 	shaderProgram.compileShaderFromString(fragment_shader, ShaderProgram::FRAGMENT);
@@ -56,6 +55,13 @@ void oGLProgram::initializeGL()
 
 void oGLProgram::paintGL()
 {
+	if(m_meshIndex == 0)
+		mesh = MeshGenerator().generateMesh(MeshGenerator::MeshType::Triangle);
+	else if(m_meshIndex == 1)
+		mesh = MeshGenerator().generateMesh(MeshGenerator::MeshType::Torus);
+	
+	m_meshIndex = -1;
+
 	Renderer().render(shaderProgram, *mesh.get());
 }
 
@@ -93,11 +99,6 @@ oGLProgram& oGLProgram::instance()
 
 void oGLProgram::setAnotherMesh(int meshIndex)
 {
-	MeshGenerator meshGenerator;
-
-	if(meshIndex == 0)
-		mesh = meshGenerator.generateMesh(MeshGenerator::MeshType::Triangle);
-	else
-		mesh = meshGenerator.generateMesh(MeshGenerator::MeshType::Torus);
+	m_meshIndex = meshIndex;
 }
 

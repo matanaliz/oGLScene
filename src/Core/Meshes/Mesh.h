@@ -19,8 +19,6 @@ public:
 
 	void addVertexBuffer(SimpleVertexBufferObjectPtr vbo, int location);
 	void addIndexBuffer(IndexesVertexBufferObjectPtr indexBuffer);
-	void use() const;
-	void unUse() const;
 
 	const IndexesVertexBufferObjectPtr getIndexesObject() const;
 	const VertexArrayObjectPtr getVertexArrayObject() const;

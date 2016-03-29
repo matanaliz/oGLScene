@@ -17,6 +17,8 @@ public:
 	void setAnotherMesh(int mesh);
 
 	static oGLProgram& instance();
+
+	int m_meshIndex;
 };
 
 #endif //OGL_PROGRAM_H

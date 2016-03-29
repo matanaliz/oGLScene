@@ -10,11 +10,15 @@ Mesh::Mesh():
 
 Mesh::~Mesh()
 {
+	//The problem with this is that when we are closing the app, these mesh is destroyed last when the gl context is not valid
+	//Or also if the context is not active 
+#if 0
 	m_vao->release();
 	for(auto vbo: m_vbos)
 		vbo->release();
 	if(m_indexBuffer)
 		m_indexBuffer->release();
+#endif
 }
 
 void Mesh::addVertexBuffer(SimpleVertexBufferObjectPtr vbo, int location)
@@ -37,15 +41,5 @@ const IndexesVertexBufferObjectPtr Mesh::getIndexesObject() const
 const VertexArrayObjectPtr Mesh::getVertexArrayObject() const
 {
 	return m_vao;
-}
-
-void Mesh::use() const
-{
-	for(auto vbo: m_vbos)
-		vbo->use();
-}
-
-void Mesh::unUse() const
-{
 }
 
