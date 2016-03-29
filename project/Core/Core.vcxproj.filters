@@ -13,33 +13,102 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\oGL">
-      <UniqueIdentifier>{7ed8a60b-cd88-4032-b8f2-3f6b811adbf3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\oGL">
-      <UniqueIdentifier>{3f6bda68-a75d-46ed-8417-87033bb4afed}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Utils">
       <UniqueIdentifier>{186ef69f-0545-4ee1-a5fa-caa32f66f060}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Meshes">
+      <UniqueIdentifier>{4ec1469b-fde5-4e0e-94f2-20caa771782e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Meshes">
+      <UniqueIdentifier>{c835a1aa-3a78-4a21-aea1-4a35d87445d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Meshes\MeshHelpers">
+      <UniqueIdentifier>{e9a57b52-971b-4859-90cc-1567dc47469f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Meshes\MeshHelpers">
+      <UniqueIdentifier>{0314cb4a-cf1d-4834-8ea7-ac9262514d3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{7ed8a60b-cd88-4032-b8f2-3f6b811adbf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{3f6bda68-a75d-46ed-8417-87033bb4afed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics\Utils">
+      <UniqueIdentifier>{6b65bc2d-dad8-4af8-9f59-1d2fb49e12b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Core\GL\ShaderProgram.cpp">
-      <Filter>Source Files\oGL</Filter>
+    <ClCompile Include="..\..\src\Core\Meshes\Mesh.cpp">
+      <Filter>Source Files\Meshes</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Core\GL\oGLProgram.cpp">
-      <Filter>Source Files\oGL</Filter>
+    <ClCompile Include="..\..\src\Core\Meshes\MeshGenerator.cpp">
+      <Filter>Source Files\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Core\Meshes\MeshHelpers\TorusGeneratorHelper.cpp">
+      <Filter>Source Files\Meshes\MeshHelpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Core\Graphics\IndexesVertexBufferObject.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Core\Graphics\oGLProgram.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Core\Graphics\ShaderProgram.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Core\Graphics\Renderer.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Core\Graphics\VertexArrayObject.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Core\Graphics\VertexBufferObject.cpp">
+      <Filter>Source Files\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\Core\GL\ShaderProgram.h">
-      <Filter>Header Files\oGL</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\Core\GL\oGLProgram.h">
-      <Filter>Header Files\oGL</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\Core\Platform.h">
       <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Utils\Asserts.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Utils\Auxilary.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Meshes\Mesh.h">
+      <Filter>Header Files\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Meshes\MeshGenerator.h">
+      <Filter>Header Files\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Meshes\MeshHelpers\TorusGeneratorHelper.h">
+      <Filter>Header Files\Meshes\MeshHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Graphics\BufferEnums.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Graphics\IndexesVertexBufferObject.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Graphics\oGLProgram.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Graphics\Renderer.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Graphics\ShaderProgram.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Graphics\VertexArrayObject.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Graphics\VertexBufferObject.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core\Graphics\Utils\ErrorChecker.h">
+      <Filter>Header Files\Graphics\Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

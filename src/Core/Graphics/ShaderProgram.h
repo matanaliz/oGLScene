@@ -22,7 +22,8 @@ public:
 	void linkProgram();
 	
 	bool compileShaderFromString( const std::string & source, ShaderProgram::GLSLShaderType type );
-	void use();
+	void use() const;
+	void unUse() const;
 	void release();
 
 	//these two function should only be called before linking the program
@@ -43,6 +44,8 @@ public:
 	static std::string readShader(const std::string& path);
 	void printActiveAttribs();
 	void printActiveUniforms();
+
+	int GetAttributeLocation(const std::string& location);
 private:
 	unsigned int m_vaoHandle;
 	unsigned int m_programHandle;

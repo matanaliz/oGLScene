@@ -53,12 +53,20 @@ void ShaderProgram::linkProgram()
 	}
 }
 
-void ShaderProgram::use()
+void ShaderProgram::use() const
 {
 	if( m_programHandle <= 0)
 		return; //TODO tell something more informative
 	glUseProgram( m_programHandle );
 }
+
+void ShaderProgram::unUse() const
+{
+	if( m_programHandle <= 0)
+		return; //TODO tell something more informative
+	glUseProgram( 0 );
+}
+
 
 void ShaderProgram::release()
 {
@@ -66,9 +74,12 @@ void ShaderProgram::release()
 		return; //TODO tell something more informative
 	
 	glDeleteShader(m_vertextProgram);
+	m_vertextProgram = 0;
 	glDeleteShader(m_fragmentProgram);
+	m_fragmentProgram = 0;
+	glUseProgram(0);
 	glDeleteProgram(m_programHandle);
-
+	m_programHandle = 0;
 }
 
 #if USE_GLM_LIB
@@ -254,5 +265,10 @@ void ShaderProgram::printActiveAttribs()
 	}
 
 	delete[] name;
+}
+
+int ShaderProgram::GetAttributeLocation(const std::string& location)
+{
+	return glGetAttribLocation(m_programHandle, location.c_str());
 }
 
