@@ -1,5 +1,6 @@
 #include "ShadersQTextEditCallBack.h"
 #include "QTextEdit.h"
+#include "Core/Graphics//oGLProgram.h"
 
 ShadersQTextEditCallBack::ShadersQTextEditCallBack(QObject *parent)
 	: QObject(parent)
@@ -20,12 +21,21 @@ void ShadersQTextEditCallBack::fragmentChanged()
 
 void ShadersQTextEditCallBack::vertexChanged()
 {
-	int i = 0;
-	i++;
+	oGLProgram::instance().setAnotherShader(vertTE->toPlainText().toStdString(), fragmTE->toPlainText().toStdString());
 }
 
-void ShadersQTextEditCallBack::SetShaderTextEdit(QTextEdit* t1, QTextEdit* t2)
+void ShadersQTextEditCallBack::setShaderTextEdit(QTextEdit* t1, QTextEdit* t2)
 {
 	vertTE = t1;
 	fragmTE = t2;
+}
+
+void ShadersQTextEditCallBack::triangleChanged(bool value)
+{
+	oGLProgram::instance().setAnotherMesh(0);
+}
+
+void ShadersQTextEditCallBack::torusChanged(bool value)
+{
+	oGLProgram::instance().setAnotherMesh(1);
 }
